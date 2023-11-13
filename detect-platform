@@ -11,4 +11,4 @@ check () {
 }
 
 check "Linux"
-check "MSYS2"
+check "MSYS2" #aka Windows (but with Linux bash)
