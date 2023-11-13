@@ -1,10 +1,15 @@
 # C++ tasks for my school
 Here I store all C++ tasks issued by my teacher.  
-NOTE: I use the `DD.MM.YYYY` date format. Function names, variables, comments etc. are in English, but everything printed on the console is written in Polish. 
+I use the `DD.MM.YYYY` date format. Function names, variables, comments etc. are in English, but everything printed on the console is written in Polish. I can translate if you need to. 
+
+## ⚠️ IMPORTANT
+Please do not just copy and paste my code if you want to use it for school. I've decided to make it open source only to help people learn off examples.  
+(I hope my teacher won't accuse me of stealing my own code lol)
 
 ## Compiling
-### For Windows (EXE)
 I prepared scripts that should handle problems and tell you instructions if you've set up anything wrong.
+### For Windows (EXE)
+I would love to use Linux as the primary platform for compilation but our teacher only uses Windows.  
 #### On Linux
 Install the `mingw-w64` package.
 Arch:
