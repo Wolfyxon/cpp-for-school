@@ -53,6 +53,7 @@ g++ path/to/file.cpp
 TODO
 
 ## My coding style
+### General style
 Brackets
 ```cpp
 if(something){
@@ -81,4 +82,16 @@ Comments
 disabled("section");
 char of = "code";
 */
+```
+### Coding itself
+#### Importing std components
+✅ Good
+```cpp
+using std::string;
+using std::to_string;
+```
+❌ Wrong
+```cpp
+// why import the whole std library if I only need string and to_string
+using namespace std;
 ```
