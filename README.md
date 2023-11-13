@@ -51,3 +51,34 @@ g++ path/to/file.cpp
 ```
 #### On Windows
 TODO
+
+## My coding style
+Brackets
+```cpp
+if(something){
+    char doMultiple;
+    things();
+}
+```
+```cpp
+if(something) doASingle(thing)
+```
+Function structure
+```cpp
+void someFunction(int some, char args){
+    // ...
+}
+```
+Comments
+```cpp
+// Message
+```
+```cpp
+//singleDisabledLine()
+```
+```cpp
+/*
+disabled("section");
+char of = "code";
+*/
+```
