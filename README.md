@@ -1,6 +1,6 @@
 # C++ tasks for my school
 Here I store all C++ tasks issued by my teacher.  
-NOTE: I use the `DD.MM.YYYY` date format.
+NOTE: I use the `DD.MM.YYYY` date format. Function names, variables, comments etc. are in English, but everything printed on the console is written in Polish. 
 
 ## Compiling
 ### For Windows (EXE)
