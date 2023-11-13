@@ -1,4 +1,4 @@
-SCRIPT=../../../exe-win
+SCRIPT=../../../exe
 CPATH=
 DIR=.
 
