@@ -3,11 +3,9 @@
 #endif
 
 #include <iostream>
-#include <algorithm>
 
 using std::cout;
 using std::cin;
-using std::min_element;
 
 int main(int argc, char *argv[]){
     cout << SIGNATURE "\n";
@@ -25,7 +23,14 @@ int main(int argc, char *argv[]){
         cin >> tab[i];
     }
 
-    cout << "Najmniejszy element: " << min_element(tab,tab+size);
+    int elm = tab[0];
+    for(int i=0; i<size; i++) {
+      if(elm>tab[i]) {
+         elm=tab[i];
+      }
+   }
+   
+   cout << "Najmniejszy element: " << elm;
 
     return 0;
 }
