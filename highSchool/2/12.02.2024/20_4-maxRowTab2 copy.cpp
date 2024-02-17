@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
             int num = array[row][col];
             if(num > max) max = num;
         }
-        cout << row << ": " << max;
+        cout << row << ": " << max << std::endl;
     }
 
     system("pause");
