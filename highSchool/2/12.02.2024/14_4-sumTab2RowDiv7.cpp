@@ -11,7 +11,7 @@ using std::cin;
 
 int main(int argc, char *argv[]) {
     cout << SIGNATURE;
-    cout << "Suma kazdego wiersza tablicy 2 wymiarowej" << std::endl;
+    cout << "Suma elementow podzielnych przez 7 kazdego wiersza tablicy 2 wymiarowej" << std::endl;
 
     int rows;
     int cols;
