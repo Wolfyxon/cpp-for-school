@@ -3,8 +3,6 @@
 SRC_DIR=$(dirname "$0")
 PLATFORM=$($SRC_DIR/detect-platform)
 
-echo "Detected platform: $PLATFORM"
-
 if [[ $PLATFORM == "Linux" ]] then
     $SRC_DIR/exe-linux "$@"
     exit
