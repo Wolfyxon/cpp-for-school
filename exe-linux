@@ -21,6 +21,8 @@ fi
 
 SIGNATURE=\""$(cat $SRC_DIR/signature)\""
 
+echo Compiling $1
+
 x86_64-w64-mingw32-g++ -Wall -c -g "$1" -o "$1.o" "-DSIGNATURE=$SIGNATURE"
 x86_64-w64-mingw32-g++ -static-libstdc++ -o "$1.exe" "$1.o" -static
 
