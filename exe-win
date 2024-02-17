@@ -29,7 +29,6 @@ if [[ -z "$1" ]] then
 fi
 
 SIGNATURE=\""$(cat $SRC_DIR/signature)\""
-echo "Assigning signature: $SIGNATURE"
 
 $COMPILER -Wall -c -g "$1" -o "$1.o" "-DSIGNATURE=$SIGNATURE"
 $COMPILER -static-libstdc++ -o "$1.exe" "$1.o" -static
