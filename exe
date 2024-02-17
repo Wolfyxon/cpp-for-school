@@ -1,5 +1,12 @@
 #!/bin/bash
 
+if [ $# -eq 0 ]
+  then
+    echo "No files were given."
+    exit
+fi
+
+
 SRC_DIR=$(dirname "$0")
 PLATFORM=$($SRC_DIR/detect-platform)
 
