@@ -4,7 +4,7 @@ DIR=.
 
 .PHONY: all
 all: 
-	@for f in $(shell ls ${DIR} | grep .cpp); do ${SCRIPT} $${f}; done
+	for f in $(shell ls ${DIR} | grep .cpp); do ${SCRIPT} $${f}; done
 
 clean:
 	rm -rf *.exe
