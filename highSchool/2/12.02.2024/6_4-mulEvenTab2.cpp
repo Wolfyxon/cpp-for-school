@@ -9,7 +9,7 @@ using std::cout;
 using std::cin;
 
 int main(int argc, char *argv[]) {
-    cout << SIGNATURE;
+    cout << SIGNATURE << std::endl;
     cout << "Iloczyn parzystych elementow tablicy dwuwymiarowej" << std::endl;
 
     int rows;

@@ -9,7 +9,7 @@ using std::cout;
 using std::cin;
 
 int main(int argc, char *argv[]) {
-    cout << SIGNATURE;
+    cout << SIGNATURE << std::endl;
     cout << "Suma elementow tablicy 2 wymiarowej podzielnych przez 7" << std::endl;
 
     int rows;

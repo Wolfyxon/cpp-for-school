@@ -10,7 +10,7 @@ using std::cout;
 using std::cin;
 
 int main(int argc, char *argv[]) {
-    cout << SIGNATURE;
+    cout << SIGNATURE << std::endl;
     cout << "Maksymalny element tablicy 2 wymiarowej" << std::endl;
 
     int rows;
