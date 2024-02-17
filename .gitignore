@@ -2,4 +2,7 @@
 *.out
 *.exe
 *.o
+
 signature
+
+.fuse_hidden*
