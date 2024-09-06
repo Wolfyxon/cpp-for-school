@@ -13,7 +13,7 @@ enum Operation {
 
 const int OperationLen = 4;
 
-void printOperation(int i, char* name) {
+void printOperation(int i, const char* name) {
     cout << i << ") " << name << endl;
 }
 
