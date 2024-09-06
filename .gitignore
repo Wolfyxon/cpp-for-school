@@ -1,8 +1,18 @@
-.vscode
+# Editor and IDEs 
+.vscode/
+.idea/
+
+# Compiled code
 *.out
 *.exe
 *.o
+*.d
+*.so
 
+# Sensitive files
 signature
 
+# Other
+*.tmp
+*~
 .fuse_hidden*
