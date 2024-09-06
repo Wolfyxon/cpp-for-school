@@ -51,21 +51,21 @@ int main(int argc, char* argv[]) {
         cin >> n;
 
         switch (oper) {
-        case Operation::ADD:
-            res += n;
-            break;
-        
-        case Operation::SUB:
-            res -= n;
-            break;
-        
-        case Operation::MUL:
-            res *= n;
-            break;
-        
-        case Operation::DIV:
-            res /= n;
-            break;
+            case Operation::ADD:
+                res += n;
+                break;
+            
+            case Operation::SUB:
+                res -= n;
+                break;
+            
+            case Operation::MUL:
+                res *= n;
+                break;
+            
+            case Operation::DIV:
+                res /= n;
+                break;
         }
     }
 
