@@ -69,7 +69,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    cout << "Wynik wynosi: " << res;
+    cout << "Wynik wynosi: " << res << endl;
 
     return 0;
 }
