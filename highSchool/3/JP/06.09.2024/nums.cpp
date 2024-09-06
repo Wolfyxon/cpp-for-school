@@ -29,7 +29,7 @@ int getOperation() {
     cin >> oper;
 
     if(oper > OperationLen - 1 || oper < 0) {
-        cout << "Nie znana operacja. Spróbuj ponownie." << endl;
+        cout << "Nieznana operacja. Spróbuj ponownie." << endl;
         return getOperation();
     }
 
