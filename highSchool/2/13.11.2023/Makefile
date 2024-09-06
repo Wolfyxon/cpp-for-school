@@ -1,1 +1,0 @@
-/run/media/wolfyxon/SZYMON/Programowanie/cpp/cpp-school/templates/Makefile
