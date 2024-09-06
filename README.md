@@ -1,7 +1,7 @@
-# C++ tasks for my school
+# C++ assignments for my school
 (If this text is in Polish or any other language than English please turn off automatic translation. I don't recommend that)
 
-Here I store all C++ tasks issued by my teacher.  
+Here I store all C++ assignments issued by my teacher.  
 I use the `DD.MM.YYYY` date format. Function names, variables, comments etc. are in English, but everything printed on the console is written in Polish (except bash scripts). I can translate if you need to. 
 
 > [!IMPORTANT]  
