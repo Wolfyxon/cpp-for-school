@@ -1,0 +1,38 @@
+#!/bin/bash
+# Install the mingw-w64-x86_64-toolchain package in Msys
+# also launch the MSYS32 MINGW64
+
+CPATH="" #My CPATH is filled with a bunch of ARM libraries that prevent normal x86_64 programs from compiling. That's why I reset it.
+COMPILER=/mingw64/bin/g++
+SRC_DIR=$(dirname "$0")
+
+
+if [ ! -f $COMPILER ]
+then
+	echo "$COMPILER was not found. If you are on Windows, please install mingw-w64-x86_64-toolchain:"
+	echo "pacman -S mingw-w64-x86_64-toolchain"
+	echo "If you are trying to compile an EXE file on Linux, please use the 'exe-linux' script."
+	echo "If you are trying to compile a Linux executable, just use normal g++."
+	exit
+fi
+
+if [[ $(which g++) != $COMPILER ]] then
+	echo "Please run the MINGW MSYS2 program otherwise the compiler will not do anything."
+	echo "If you are trying to run this on Linux, please use the exe-linux script"
+	exit
+fi
+
+if [[ -z "$1" ]] then
+	echo "No file specified."
+	echo "Usage: exe-win path/to/file.cpp"
+	exit
+fi
+
+SIGNATURE=\""$(cat $SRC_DIR/signature)\""
+
+echo Compiling $1
+
+$COMPILER -Wall -c -g "$1" -o "$1.o" "-DSIGNATURE=$SIGNATURE"
+$COMPILER -static-libstdc++ -o "$1.exe" "$1.o" -static
+
+rm -rf "$1.o"

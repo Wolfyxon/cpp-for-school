@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Requires the mingw-w64 package
+CPATH="" #My CPATH is filled with a bunch of ARM libraries that prevent normal x86_64 programs from compiling. That's why I reset it.
+COMPILER=/usr/bin/x86_64-w64-mingw32-g++
+SRC_DIR=$(dirname "$0")
+
+if [ ! -f $COMPILER ]
+then
+	echo "$COMPILER was not found, please install the mingw-w64 package:"
+	echo "Arch: sudo pacman -S mingw-w64"
+	echo "Debian: sudo apt install mingw-w64"
+	exit
+fi
+
+if [[ -z "$1" ]] then
+	echo "No file specified."
+	echo "Usage: exe-linux path/to/file.cpp"
+	exit
+fi
+
+SIGNATURE=\""$(cat $SRC_DIR/signature)\""
+
+echo Compiling $1
+
+x86_64-w64-mingw32-g++ -Wall -c -g "$1" -o "$1.o" "-DSIGNATURE=$SIGNATURE"
+x86_64-w64-mingw32-g++ -static-libstdc++ -o "$1.exe" "$1.o" -static
+
+rm -rf "$1.o"

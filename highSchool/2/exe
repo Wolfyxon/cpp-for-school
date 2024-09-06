@@ -1,0 +1,22 @@
+#!/bin/bash
+
+if [[ $# -eq 0 ]] then
+    echo "No files were given."
+    exit
+fi
+
+
+SRC_DIR=$(dirname "$0")
+PLATFORM=$($SRC_DIR/detect-platform)
+
+if [[ $PLATFORM == "Linux" ]] then
+    $SRC_DIR/exe-linux "$@"
+    exit
+fi
+
+if [[ $PLATFORM == "MSYS2" ]] then
+    $SRC_DIR/exe-win "$@"
+    exit
+fi
+
+echo "Sorry, unsupported platform. If you are sure this platform is supported please open an issue" 

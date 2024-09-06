@@ -1,0 +1,14 @@
+#!/bin/bash
+# REQUIRES TESTING
+
+FILE=/etc/os-release
+
+check () {
+  if [[ ! -z "$(cat $FILE | grep $1)" ]]; then
+    echo $1
+    exit
+  fi
+}
+
+check "Linux"
+check "MSYS2" #aka Windows (but with Linux bash)
