@@ -39,13 +39,24 @@ int getOperation() {
     return oper;
 }
 
-int main(int argc, char* argv[]) {
+int getAmount() {
     int amt;
-    int oper = getOperation();
-    float res = 0;
-
     cout << "Podaj ilość: ";
     cin >> amt;
+
+    if(amt < 1) {
+        cout << "Ilość musi wynosić conajmniej 1." << endl;
+        return getAmount();
+    }
+
+    return amt;
+}
+
+int main(int argc, char* argv[]) {
+    int oper = getOperation();
+    int amt = getAmount();
+
+    float res = 0;
     
     for(int i = 0; i < amt; i++) {
         float n;
