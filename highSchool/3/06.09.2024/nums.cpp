@@ -42,13 +42,13 @@ int getOperation() {
 int main(int argc, char* argv[]) {
     int amt;
     int oper = getOperation();
-    int res = 0;
+    float res = 0;
 
     cout << "Podaj ilość: ";
     cin >> amt;
     
     for(int i = 0; i < amt; i++) {
-        int n;
+        float n;
 
         cout << "Podaj liczbę nr. " << i + 1 << ": ";
         cin >> n;
