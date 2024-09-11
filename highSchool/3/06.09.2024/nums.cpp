@@ -1,4 +1,5 @@
 #include <iostream>
+#include <cmath>
 
 using std::cout;
 using std::cin;
@@ -8,10 +9,11 @@ enum Operation {
     ADD,
     SUB,
     MUL,
-    DIV
+    DIV,
+    POW
 };
 
-const int OperationLen = 4;
+const int OperationLen = 5;
 
 void printOperation(int i, const char* name) {
     cout << i << ") " << name << endl;
@@ -22,6 +24,7 @@ int getOperation() {
     printOperation(1, "Odejmowanie");
     printOperation(2, "Mnożenie");
     printOperation(3, "Dzielenie");
+    printOperation(4, "Potęgowanie");
     
     int oper;
 
@@ -49,7 +52,7 @@ int main(int argc, char* argv[]) {
 
         cout << "Podaj liczbę nr. " << i + 1 << ": ";
         cin >> n;
-
+        
         switch (oper) {
             case Operation::ADD:
                 res += n;
@@ -65,6 +68,15 @@ int main(int argc, char* argv[]) {
             
             case Operation::DIV:
                 res /= n;
+                break;
+
+            case Operation::POW:
+                if(i == 0) {
+                    res = n;
+                    continue;
+                }
+
+                res = std::pow(res, n);
                 break;
         }
     }
