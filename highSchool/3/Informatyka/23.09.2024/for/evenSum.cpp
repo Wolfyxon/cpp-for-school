@@ -14,9 +14,8 @@ int main(int argc, char* argv[]) {
     int sum = 0;
     int add = 2;
 
-    for(int i = 0; i < n; i++) {
-        sum += add;
-        add += 2;
+    for(int i = 1; i <= n; i++) {
+        sum += i * 2;
     }
 
     cout << "Suma " << n << " kolejnych liczb parzystych" << endl;
