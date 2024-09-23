@@ -14,7 +14,7 @@ int main(int argc, char* argv[]) {
     int sum = 0;
 
     for(int i = 1; i <= n; i++) {
-        sum += 2 * i - 1;
+        sum += i * 2 - 1;
     }
 
     cout << "Suma " << n << " kolejnych liczb nieparzystych" << endl;
