@@ -21,5 +21,6 @@ int main(int argc, char* argv[]) {
         cout << n * i << ", ";
     }
 
+    cout << endl;
     return 0;
 }
