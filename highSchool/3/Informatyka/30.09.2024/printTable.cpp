@@ -5,7 +5,20 @@ using std::cin;
 using std::endl;
 
 int main(int argc, char* argv[]) {
-    for(int i = 48; i <= 126; i++) {
+    int min;
+    int max;
+
+    cout << "Podaj zakres tablicy znaków:" << endl;
+
+    cout << "Min: ";
+    cin >> min;
+
+    cout << "Max: ";
+    cin >> max;
+
+    cout << endl;
+
+    for(int i = min; i <= max; i++) {
         char ch = i;
         cout << ch << " ";
 
