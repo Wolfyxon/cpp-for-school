@@ -16,7 +16,7 @@ int main(int argc, char* argv[]) {
     while(true) {
         i++;
 
-        cout << "Podaj" << i << " liczbę: ";
+        cout << "Podaj  " << i << " liczbę: ";
         cin >> current;
 
         if(current == 0) break;
