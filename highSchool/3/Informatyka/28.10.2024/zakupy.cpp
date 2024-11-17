@@ -8,6 +8,7 @@ using std::string;
 int main(void) {
     int len = 0;
     int max_len = 20;
+
     string products[max_len];
 
     for(int i = 0; i < max_len; i++) {
@@ -29,7 +30,7 @@ int main(void) {
 
         if(dup) continue;
 
-        products[i] = inp;
+        products[len] = inp;
         len++;
     }
 
