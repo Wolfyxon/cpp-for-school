@@ -50,7 +50,6 @@ int main(void) {
             break;
         }
 
-
         case Action::WRITE: {
             std::ofstream file(path);
 
