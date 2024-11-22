@@ -52,7 +52,7 @@ int main(void) {
 
             if(!file.is_open()) {
                 cout << "Nie można otworzyć pliku. Na pewno istnieje?" << endl;
-                return main()
+                return main();
             }
 
             string buf;
