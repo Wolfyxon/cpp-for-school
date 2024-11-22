@@ -39,16 +39,21 @@ Action getAction() {
     return action;
 }
 
-int main(void) {
-    Action action = getAction();
+string getPath() {
     string path;
 
     cout << "Podaj ścieżkę pliku: ";
     cin >> path;
 
+    return path;
+}
+
+int main(void) {
+    Action action = getAction();
+
     switch(action) {
         case Action::READ: {
-            std::ifstream file(path);
+            std::ifstream file(getPath());
 
             if(!file.is_open()) {
                 cout << "Nie można otworzyć pliku. Na pewno istnieje?" << endl;
@@ -64,7 +69,7 @@ int main(void) {
         }
 
         case Action::WRITE: {
-            std::ofstream file(path);
+            std::ofstream file(getPath());
 
             if(!file.is_open()) {
                 cout << "Nie można stworzyć pliku" << endl;
