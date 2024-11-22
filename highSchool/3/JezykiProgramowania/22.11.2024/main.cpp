@@ -47,6 +47,17 @@ int main(void) {
     switch(action) {
         case Action::READ: {
             std::ifstream file(path);
+
+            if(!file.is_open()) {
+                cout << "Nie można otworzyć pliku. Na pewno istnieje?" << endl;
+                return 1;
+            }
+
+            string buf;
+            while (std::getline(file, buf)) {
+                cout << buf;
+            }
+
             break;
         }
 
