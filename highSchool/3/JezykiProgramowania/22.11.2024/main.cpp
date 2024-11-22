@@ -53,6 +53,21 @@ int main(void) {
 
         case Action::WRITE: {
             std::ofstream file(path);
+
+            if(!file.is_open()) {
+                cout << "Nie można stworzyć pliku" << endl;
+                return 1;
+            }
+
+            string content;
+
+            cout << "Podaj zawartość pliku:" << endl;
+            cin >> content;
+
+            file << content << endl;
+            file.close();
+
+            cout << "Plik zapisany" << endl;
             break;
         }
     }
