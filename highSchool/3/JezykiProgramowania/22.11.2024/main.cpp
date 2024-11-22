@@ -8,12 +8,14 @@ using std::endl;
 
 enum Action {
     READ,
-    WRITE
+    WRITE,
+    QUIT
 };
 
 const string ACTION_NAMES[] = {
     "Czytaj plik",
-    "Zapisz plik"
+    "Zapisz plik",
+    "Wyjdź"
 };
 
 Action getAction() {
@@ -50,7 +52,7 @@ int main(void) {
 
             if(!file.is_open()) {
                 cout << "Nie można otworzyć pliku. Na pewno istnieje?" << endl;
-                return 1;
+                return main()
             }
 
             string buf;
@@ -66,7 +68,7 @@ int main(void) {
 
             if(!file.is_open()) {
                 cout << "Nie można stworzyć pliku" << endl;
-                return 1;
+                return main();
             }
 
             string content;
@@ -79,6 +81,11 @@ int main(void) {
 
             cout << "Plik zapisany" << endl;
             break;
+        }
+
+        case Action::QUIT: {
+            cout << "Bajo jajo" << endl;
+            return 0;
         }
     }
 
