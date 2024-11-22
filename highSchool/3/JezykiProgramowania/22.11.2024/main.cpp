@@ -61,6 +61,7 @@ int main(void) {
             }
 
             string buf;
+            
             while (std::getline(file, buf)) {
                 cout << buf;
             }
