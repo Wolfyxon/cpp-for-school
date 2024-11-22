@@ -18,17 +18,16 @@ int main(void) {
 
     cout << "Trójkąt:" << endl;
 
-    int max = 0;
+    int idx = 0;
 
-    for(int row = 0; row < max_len; row++) {
-        for(int i = max; i < max_len; i++) {
-            cout << strings[i] << " ";
+    for(int row = 0; row < max_len && idx < max_len; row++) {
+        for(int i = 0; i < row; i++) {
+            cout << strings[idx] << " ";
+            idx++;
         }
 
         cout << endl;
-        max++;
     }
 
-    cout << endl;
     return 0;
 }
