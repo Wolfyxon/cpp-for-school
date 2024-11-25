@@ -18,7 +18,7 @@ int main(void) {
     string encrypted;
 
     for(int i = 0; i < key; i++) {        
-        for(int ii = i; ii < encrypted.length(); ii += key) {
+        for(int ii = i; ii < text.length(); ii += key) {
             encrypted += text[ii];
         }
     }
