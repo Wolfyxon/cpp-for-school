@@ -22,7 +22,7 @@ int main(void) {
             cout << endl;
         }
     }
-    cout << endl;
+    cout << endl << "Zaszyfrowany text:" << endl;
 
     for(int i = 0; i < key; i++) {        
         for(int ii = i; ii < text.length(); ii += key) {
