@@ -15,8 +15,6 @@ int main(void) {
     cout << "Podaj klucz: ";
     cin >> key;
 
-    string encrypted;
-
     for(int i = 0; i < text.length(); i++) {
         cout << text[i];
 
@@ -28,10 +26,9 @@ int main(void) {
 
     for(int i = 0; i < key; i++) {        
         for(int ii = i; ii < text.length(); ii += key) {
-            encrypted += text[ii];
+            cout << text[ii];
         }
     }
 
-    cout << "Zaszyfrowany text:" << endl;
-    cout << encrypted;
+    cout << endl;
 }
