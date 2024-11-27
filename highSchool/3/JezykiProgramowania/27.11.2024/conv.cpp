@@ -41,7 +41,7 @@ string nconvert(int number, int base) {
     string res;
 
     while(number > 0) {
-        res += to_string(number % base);
+        res = to_string(number % base) + res;
         number /= base;
     }
 
