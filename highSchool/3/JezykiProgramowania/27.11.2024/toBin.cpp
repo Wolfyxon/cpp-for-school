@@ -69,10 +69,13 @@ int main(void) {
             break;
         case BINARY:
             baseType = 2;
+            break;
         case HEX:
             baseType = 16;
+            break;
         case OCT:
             baseType = 8;
+            break;
     }
 
     int base = stoi(input, nullptr, baseType);
