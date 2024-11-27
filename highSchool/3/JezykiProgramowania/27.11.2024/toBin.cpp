@@ -11,7 +11,8 @@ enum System {
 };
 
 const string SYSTEM_NAMES[] = {
-    "Dziesietny"
+    "Dziesietny",
+    "Binarny"
 };
 
 int main(void) {
