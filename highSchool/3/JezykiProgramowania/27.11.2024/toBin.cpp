@@ -37,5 +37,10 @@ int main(void) {
     System from = inputSystem("Podaj źródłowy system");
     System to = inputSystem("Podaj końcowy system");
 
+    cout << "Podaj liczbę w systemie: " << SYSTEM_NAMES[from] << ": " << endl;
+
+    string input;
+    cin >> input;
+
     return 0;
 }
