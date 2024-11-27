@@ -40,7 +40,7 @@ System inputSystem(string query) {
 string nconvert(int number, int base) {
     string res;
 
-    while(base > 0) {
+    while(number > 0) {
         res += to_string(number % base);
         number /= base;
     }
