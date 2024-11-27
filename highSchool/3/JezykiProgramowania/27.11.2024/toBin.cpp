@@ -12,13 +12,15 @@ using std::to_string;
 enum System {
     DECIMAL,
     BINARY,
-    HEX
+    HEX,
+    OCT
 };
 
 const string SYSTEM_NAMES[] = {
     "Dziesietny",
     "Binarny",
-    "Szesnastkowy"
+    "Szesnastkowy",
+    "Ósemkowy"
 };
 
 System inputSystem(string query) {
@@ -69,24 +71,34 @@ int main(void) {
             baseType = 2;
         case HEX:
             baseType = 16;
+        case OCT:
+            baseType = 8;
     }
 
     int base = stoi(input, nullptr, baseType);
     string result;
 
     switch (to) {
-        case DECIMAL:
+        case DECIMAL: {
             result = to_string(base);
             break;
-        case BINARY:
-            result = nconvert(base, 2)
+        }
+        case BINARY: {
+            result = nconvert(base, 2);
             break;
-        case HEX:
+        }
+        case HEX: {
             std::stringstream stream;
             stream << std::hex << base;
 
             result = stream.str();
             break;
+        }
+        case OCT: {
+            result = nconvert(base, 8);
+            break;
+        }
+
     }
 
     cout << result << endl;
