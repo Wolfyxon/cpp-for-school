@@ -1,8 +1,10 @@
 #include <iostream>
+#include <string>
 
 using std::cin;
 using std::cout;
 using std::endl;
+using std::stoi;
 using std::string;
 
 enum System {
@@ -41,6 +43,18 @@ int main(void) {
 
     string input;
     cin >> input;
+
+    int baseType;
+
+    switch (from) {
+        case DECIMAL:
+            baseType = 10;
+            break;
+        case BINARY:
+            baseType = 2;
+    }
+
+    int base = stoi(input, nullptr, baseType);
 
     return 0;
 }
