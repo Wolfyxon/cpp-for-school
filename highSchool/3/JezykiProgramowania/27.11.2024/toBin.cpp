@@ -1,4 +1,5 @@
 #include <iostream>
+#include <sstream>
 #include <string>
 
 using std::cin;
@@ -10,12 +11,14 @@ using std::to_string;
 
 enum System {
     DECIMAL,
-    BINARY
+    BINARY,
+    HEX
 };
 
 const string SYSTEM_NAMES[] = {
     "Dziesietny",
-    "Binarny"
+    "Binarny",
+    "Szesnastkowy"
 };
 
 System inputSystem(string query) {
@@ -53,6 +56,8 @@ int main(void) {
             break;
         case BINARY:
             baseType = 2;
+        case HEX:
+            baseType = 16;
     }
 
     int base = stoi(input, nullptr, baseType);
@@ -68,6 +73,12 @@ int main(void) {
                 base /= 2;
             }
 
+            break;
+        case HEX:
+            std::stringstream stream;
+            stream << std::hex << base;
+
+            result = stream.str();
             break;
     }
 
