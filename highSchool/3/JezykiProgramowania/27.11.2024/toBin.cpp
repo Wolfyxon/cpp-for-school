@@ -6,6 +6,7 @@ using std::cout;
 using std::endl;
 using std::stoi;
 using std::string;
+using std::to_string;
 
 enum System {
     DECIMAL,
@@ -55,6 +56,21 @@ int main(void) {
     }
 
     int base = stoi(input, nullptr, baseType);
+    string result;
 
+    switch (to) {
+        case DECIMAL:
+            result = to_string(base);
+            break;
+        case BINARY:
+            while(base > 0) {
+                result += to_string(base % 2);
+                base /= 2;
+            }
+
+            break;
+    }
+
+    cout << result << endl;
     return 0;
 }
