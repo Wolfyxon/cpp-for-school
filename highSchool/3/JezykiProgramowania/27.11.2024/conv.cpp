@@ -101,7 +101,6 @@ int main(void) {
             result = nconvert(base, 8);
             break;
         }
-
     }
 
     cout << result << endl;
