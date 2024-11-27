@@ -35,6 +35,17 @@ System inputSystem(string query) {
     return (System) (inp - 1);
 }
 
+string nconvert(int number, int base) {
+    string res;
+
+    while(base > 0) {
+        res += to_string(number % base);
+        number /= base;
+    }
+
+    return res;
+}
+
 int main(void) {
     for(int i = 0; i < sizeof(SYSTEM_NAMES) / sizeof(string); i++) {
         cout << i + 1 << ". " << SYSTEM_NAMES[i] << endl;;
@@ -68,11 +79,7 @@ int main(void) {
             result = to_string(base);
             break;
         case BINARY:
-            while(base > 0) {
-                result += to_string(base % 2);
-                base /= 2;
-            }
-
+            result = nconvert(base, 2)
             break;
         case HEX:
             std::stringstream stream;
