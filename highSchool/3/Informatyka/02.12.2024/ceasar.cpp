@@ -37,6 +37,11 @@ int main(void) {
     if(mode + 1 == DECRYPT) key *= -1;
 
     for(int i = 0; i < msg.length(); i++) {
+        if(msg[i] == ' ') {
+            cout << msg[i];
+            continue;
+        }
+
         char ch = A_IDX + wrap(msg[i] - A_IDX + key, LETTERS);
         cout << ch;
     }
