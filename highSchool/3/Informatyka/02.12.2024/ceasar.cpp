@@ -3,6 +3,7 @@
 using std::cin;
 using std::cout;
 using std::endl;
+using std::getline;
 using std::string;
 
 enum Mode {
@@ -23,7 +24,7 @@ int main(void) {
     int mode;
 
     cout << "Podaj wiadomość: ";
-    cin >> msg;
+    getline(cin, msg);
 
     cout << "Podaj klucz: ";
     cin >> key;
