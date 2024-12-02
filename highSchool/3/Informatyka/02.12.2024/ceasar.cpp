@@ -23,7 +23,7 @@ int main(void) {
     cin >> key;
 
     for(int i = 0; i < msg.length(); i++) {
-        char ch = A_IDX + wrap(msg[i] - A_IDX + key, LETTERS); //((msg[i] - A_IDX + key) % LETTERS);
+        char ch = A_IDX + wrap(msg[i] - A_IDX + key, LETTERS);
         cout << ch;
     }
 
