@@ -6,7 +6,6 @@ using std::endl;
 using std::string;
 
 enum Mode {
-    laziness,
     ENCRYPT,
     DECRYPT
 };
@@ -35,7 +34,7 @@ int main(void) {
 
     cin >> mode;
 
-    if(mode == DECRYPT) key *= -1;
+    if(mode + 1 == DECRYPT) key *= -1;
 
     for(int i = 0; i < msg.length(); i++) {
         char ch = A_IDX + wrap(msg[i] - A_IDX + key, LETTERS);
