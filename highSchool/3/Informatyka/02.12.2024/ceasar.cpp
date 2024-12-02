@@ -8,6 +8,10 @@ using std::string;
 const int A_IDX = 'a';
 const int LETTERS = 26;
 
+int wrap(int size, int idx) {
+    return ((size % idx) + idx) % idx;
+}
+
 int main(void) {
     string msg;
     int key;
@@ -19,7 +23,7 @@ int main(void) {
     cin >> key;
 
     for(int i = 0; i < msg.length(); i++) {
-        char ch = A_IDX + ((msg[i] - A_IDX + key) % LETTERS);
+        char ch = A_IDX + wrap(msg[i] - A_IDX + key, LETTERS); //((msg[i] - A_IDX + key) % LETTERS);
         cout << ch;
     }
 
