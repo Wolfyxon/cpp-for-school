@@ -5,6 +5,9 @@ using std::cout;
 using std::endl;
 using std::string;
 
+const int A_IDX = 'a';
+const int LETTERS = 26;
+
 int main(void) {
     string msg;
     int key;
@@ -16,7 +19,7 @@ int main(void) {
     cin >> key;
 
     for(int i = 0; i < msg.length(); i++) {
-        char ch = msg[i] + key;
+        char ch = A_IDX + ((msg[i] - A_IDX + key) % LETTERS);
         cout << ch;
     }
 
