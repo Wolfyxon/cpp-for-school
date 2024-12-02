@@ -19,7 +19,7 @@ int main(void) {
     cout << "Podaj wiadomość: ";
     cin >> msg;
 
-    cout << "Podaj kklucz: ";
+    cout << "Podaj klucz: ";
     cin >> key;
 
     for(int i = 0; i < msg.length(); i++) {
