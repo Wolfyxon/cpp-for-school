@@ -8,7 +8,6 @@ int main() {
     scanf("%i %i %i", &nums[0], &nums[1], &nums[2]);
 
     int greatestIdx = 0;
-
     int powSum = 0;
 
     for(int i = 0; i < 3; i++) {
