@@ -1,5 +1,5 @@
 # C++ assignments for my school
-Also ocasionally C to piss off my teachers.
+Also occasionally C to piss off my teachers.
 (If this text is in Polish or any other language than English please turn off automatic translation. I don't recommend that)
 
 Here I store all C++ assignments issued by my teacher.  
