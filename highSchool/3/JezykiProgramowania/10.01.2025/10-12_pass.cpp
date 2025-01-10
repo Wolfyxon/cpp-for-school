@@ -55,7 +55,7 @@ void menuLogin() {
     User* user = getUser(login);
 
     if(user == NULL) {
-        cout << "Użytkownik nie istnieje";
+        cout << "Użytkownik nie istnieje" << endl;
 
         main();
         return;
