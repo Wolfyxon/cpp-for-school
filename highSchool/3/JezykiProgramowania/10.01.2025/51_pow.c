@@ -6,11 +6,5 @@ int main() {
     printf("Podaj liczbę i potęgę (oddzielone spacjami): ");
     scanf("%i %i", &x, &y);
 
-    int n = x;
-    
-    for(int i = 1; i < y; i++) {
-        n *= x;
-    }
 
-    printf("%i \n", n);
 }
