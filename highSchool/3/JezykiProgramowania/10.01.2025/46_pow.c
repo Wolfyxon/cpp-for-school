@@ -8,7 +8,7 @@ int main() {
 
     int n = x;
     
-    for(int i = 0; i < y; i++) {
+    for(int i = 1; i < y; i++) {
         n *= x;
     }
 
