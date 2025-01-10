@@ -11,4 +11,6 @@ int main() {
     for(int i = 0; i < y; i++) {
         n *= x;
     }
+
+    printf("%i \n", n);
 }
