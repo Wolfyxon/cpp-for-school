@@ -32,6 +32,22 @@ int main() {
         }
 
         case 2: {
+            int bin;
+            int decimal = 0;
+
+            cout << "Podaj liczbę binarną: ";
+            cin >> bin;
+
+            int base = 1;
+
+            while(bin > 0) {
+                decimal += (bin % 10) * base;
+                bin /= 10;
+
+                base *= 2;
+            }
+
+            cout << decimal << endl;
             break;
         }
         
