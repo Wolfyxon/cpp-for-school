@@ -1,14 +1,16 @@
 #include <stdio.h>
 
+int pow(int x, int y) {
+    if(y == 1) return x;
+
+    return pow(x * x, y - 1);
+} 
+
 int main() {
     int x, y;
 
     printf("Podaj liczbę i potęgę (oddzielone spacjami): ");
     scanf("%i %i", &x, &y);
 
-    int n = x;
-    
-    for(int i = 0; i < y; i++) {
-        n *= x;
-    }
+    printf("Wynik: %i \n", pow(x, y));
 }
