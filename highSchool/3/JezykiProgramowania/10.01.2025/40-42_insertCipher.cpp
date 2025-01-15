@@ -56,6 +56,7 @@ string replace(string text, map<char, char> key) {
 
 int main() {
     int mode;
+    map<char, char> key = randomKey();
 
     cout << "Co chcesz zrobić?" << endl;
     cout << "1. Zaszyfruj" << endl;
@@ -71,7 +72,7 @@ int main() {
             cout << "Podaj tekst: ";
             std::getline(cin, text);
 
-
+            cout << replace(text, key);
 
             break;
         }
