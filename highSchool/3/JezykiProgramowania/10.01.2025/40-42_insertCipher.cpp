@@ -62,6 +62,15 @@ string replace(string text, map<char, char> key) {
     return res;
 }
 
+string input() {
+    string res;
+
+    cin.ignore();
+    std::getline(cin, res);
+
+    return res;
+}
+
 void loop(map<char, char> key) {
     int mode;
 
@@ -74,12 +83,9 @@ void loop(map<char, char> key) {
 
     switch (mode) {
         case 1: {
-            string text;
-
             cout << "Podaj tekst: ";
 
-            cin.ignore();
-            std::getline(cin, text);
+            string text = input();
 
             cout << replace(text, key);
 
@@ -87,12 +93,9 @@ void loop(map<char, char> key) {
         }
     
         case 2: {
-            string text;
-
             cout << "Podaj zaszyfrowany tekst: ";
 
-            cin.ignore();
-            std::getline(cin, text);
+            string text = input();
 
             cout << replace(text, reverseKey(key));
 
