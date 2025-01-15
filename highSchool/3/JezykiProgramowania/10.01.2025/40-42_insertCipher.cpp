@@ -26,7 +26,7 @@ bool hasValue(map<char, char> key, char value) {
 }
 
 map<char, char> randomKey() {
-    vector<char> chars;
+    vector<char> chars = getChars();
     map<char, char> res;
 
     for(char ch : chars) {
@@ -71,7 +71,7 @@ int main() {
     for(auto entry : key) {
         cout << entry.first << " -> " << entry.second << "\n";
     }
-    
+
     cout << endl;
 
     cout << "Co chcesz zrobić?" << endl;
