@@ -104,10 +104,11 @@ void loop(map<char, char> key) {
         }
         
         default:
-            cout << "Nieznana komenda" << endl;
+            cout << "Nieznana komenda";
             break;
     }
 
+    cout << endl;
     loop(key);
 }
 
