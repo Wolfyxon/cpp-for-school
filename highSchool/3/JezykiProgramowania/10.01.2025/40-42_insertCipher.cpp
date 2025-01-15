@@ -78,6 +78,8 @@ int main() {
             string text;
 
             cout << "Podaj tekst: ";
+
+            cin.ignore();
             std::getline(cin, text);
 
             cout << replace(text, key);
