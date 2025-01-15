@@ -17,6 +17,14 @@ vector<char> getChars() {
     return vec;
 }
 
+bool hasValue(map<char, char> key, char value) {
+    for(auto entry : key) {
+        if(entry.second == value) return true;
+    }
+
+    return false;
+}
+
 map<char, char> randomKey() {
     vector<char> chars;
     map<char, char> res;
@@ -24,7 +32,7 @@ map<char, char> randomKey() {
     for(char ch : chars) {
         char newCh = 0;
 
-        while (newCh == 0 || res.count(newCh) != 0) {
+        while (newCh == 0 || hasValue(res, newCh)) {
             newCh = chars[rand() % 26];
         }
 
