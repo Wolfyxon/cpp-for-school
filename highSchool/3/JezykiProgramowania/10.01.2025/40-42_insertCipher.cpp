@@ -118,10 +118,15 @@ void loop(map<char, char> key) {
 int main() {
     map<char, char> key = randomKey();
 
-    cout << "Klucz:";
+    cout << "Klucz:" << endl;
 
+    int i = 0;
     for(auto entry : key) {
-        cout << entry.first << " -> " << entry.second << "\n";
+        cout << entry.first << " -> " << entry.second << "   ";
+
+        if(i % 4 == 0) cout << "\n";
+
+        i++;
     }
 
     cout << endl;
