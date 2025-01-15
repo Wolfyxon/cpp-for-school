@@ -66,6 +66,14 @@ int main() {
     int mode;
     map<char, char> key = randomKey();
 
+    cout << "Klucz:";
+
+    for(auto entry : key) {
+        cout << entry.first << " -> " << entry.second << "\n";
+    }
+    
+    cout << endl;
+
     cout << "Co chcesz zrobić?" << endl;
     cout << "1. Zaszyfruj" << endl;
     cout << "2. Odszyfruj" << endl;
