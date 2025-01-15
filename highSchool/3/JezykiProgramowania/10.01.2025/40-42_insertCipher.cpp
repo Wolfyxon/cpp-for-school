@@ -90,7 +90,7 @@ int main() {
         }
 
         case 3: {
-            return;
+            return 0;
         }
         
         default:
