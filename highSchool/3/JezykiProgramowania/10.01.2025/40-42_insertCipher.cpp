@@ -44,6 +44,16 @@ map<char, char> reverseKey(map<char, char> key) {
     return res;
 }
 
+string replace(string text, map<char, char> key) {
+    string res;
+
+    for(auto ch : text) {
+        res += key[ch];
+    }
+
+    return res;
+}
+
 int main() {
     int mode;
 
