@@ -62,17 +62,8 @@ string replace(string text, map<char, char> key) {
     return res;
 }
 
-int main() {
+void loop(map<char, char> key) {
     int mode;
-    map<char, char> key = randomKey();
-
-    cout << "Klucz:";
-
-    for(auto entry : key) {
-        cout << entry.first << " -> " << entry.second << "\n";
-    }
-
-    cout << endl;
 
     cout << "Co chcesz zrobić?" << endl;
     cout << "1. Zaszyfruj" << endl;
@@ -100,7 +91,7 @@ int main() {
         }
 
         case 3: {
-            return 0;
+            return;
         }
         
         default:
@@ -108,5 +99,19 @@ int main() {
             break;
     }
 
-    main();
+    loop(key);
+}
+
+int main() {
+    map<char, char> key = randomKey();
+
+    cout << "Klucz:";
+
+    for(auto entry : key) {
+        cout << entry.first << " -> " << entry.second << "\n";
+    }
+
+    cout << endl;
+
+    loop(key);
 }
