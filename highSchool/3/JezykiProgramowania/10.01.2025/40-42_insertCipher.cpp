@@ -87,6 +87,15 @@ void loop(map<char, char> key) {
         }
     
         case 2: {
+            string text;
+
+            cout << "Podaj zaszyfrowany tekst: ";
+
+            cin.ignore();
+            std::getline(cin, text);
+
+            cout << replace(text, reverseKey(key));
+
             break;
         }
 
