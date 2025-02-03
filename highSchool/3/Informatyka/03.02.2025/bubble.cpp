@@ -26,7 +26,7 @@ int main() {
             int current = nums[i];
             int next = nums[i + 1];
 
-            if(current < next) {
+            if(current > next) {
                 sorted = false;
 
                 nums[i] = next;
@@ -34,7 +34,10 @@ int main() {
             }
         }
     }
-    
-    
 
+    for(int n : nums) {
+        cout << n << " ";
+    }
+    
+    cout << endl;
 }
