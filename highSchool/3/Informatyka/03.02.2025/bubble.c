@@ -13,7 +13,13 @@ int main() {
         if(ch == *"x") break;
 
         len++;
-        realloc(nums, len * sizeof(int));
+        nums = realloc(nums, len * sizeof(int));
+
+        if(nums == NULL) {
+            printf("RAM się pali albo system ma skill issue \n");
+            return 1;
+        }
+
         nums[len - 1] = atoi(&ch);
     }
     
