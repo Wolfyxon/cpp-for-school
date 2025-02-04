@@ -9,8 +9,10 @@ int main() {
     int* nums = malloc(len);
 
     while (true) {
-        char ch = getc(stdin);
-        if(ch == *"x") break;
+        char ch[64];
+        scanf("%64s", &ch);
+
+        if(*ch == *"x") break;
 
         len++;
         nums = realloc(nums, len * sizeof(int));
@@ -20,7 +22,7 @@ int main() {
             return 1;
         }
 
-        nums[len - 1] = atoi(&ch);
+        nums[len - 1] = atoi(ch);
     }
     
     bool sorted = false;
