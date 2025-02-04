@@ -5,8 +5,8 @@
 int main() {
     printf("Podawaj liczby, lub x by zakończyć \n");
 
-    int len = 1;
-    int* nums = malloc(len * sizeof(int));
+    int len = 0;
+    int* nums = malloc(len);
 
     while (true) {
         char ch = getc(stdin);
