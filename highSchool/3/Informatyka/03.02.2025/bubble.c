@@ -6,7 +6,7 @@ int main() {
     printf("Podawaj liczby, lub x by zakończyć \n");
 
     int len = 0;
-    int* nums = malloc(len);
+    int* nums = malloc(0);
 
     while (true) {
         char ch[64];
