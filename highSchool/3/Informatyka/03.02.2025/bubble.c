@@ -1,6 +1,6 @@
 #include <stdio.h>
-
 #include <stdlib.h>
+#include <stdbool.h>
 
 int main() {
     printf("Podawaj liczby, lub x by zakończyć \n");
@@ -8,7 +8,7 @@ int main() {
     int len = 1;
     int* nums = malloc(len * sizeof(int));
 
-    while (1) {
+    while (true) {
         char ch = getc(stdin);
         if(ch == *"x") break;
 
@@ -17,4 +17,27 @@ int main() {
         nums[len - 1] = atoi(&ch);
     }
     
+    bool sorted = false;
+
+    while (!sorted) {
+        sorted = true;
+
+        for(int i = 0; i < len - 1; i++) {
+            int current = nums[i];
+            int next = nums[i + 1];
+
+            if(current > next) {
+                sorted = false;
+
+                nums[i] = next;
+                nums[i + 1] = current;
+            }
+        }
+    }
+
+    for(int i = 0; i < len; i++) {
+        printf("%i ", nums[i]);
+    }
+
+    puts("");
 }
