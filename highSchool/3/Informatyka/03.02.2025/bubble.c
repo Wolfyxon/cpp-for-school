@@ -6,7 +6,7 @@ int main() {
     printf("Podawaj liczby, lub x by zakończyć \n");
 
     int len = 0;
-    int* nums = malloc(0);
+    int* nums = (int*) malloc(0);
 
     while (true) {
         char ch[64];
@@ -15,7 +15,7 @@ int main() {
         if(*ch == *"x") break;
 
         len++;
-        nums = realloc(nums, len * sizeof(int));
+        nums = (int*) realloc(nums, len * sizeof(int));
 
         if(nums == NULL) {
             printf("RAM się pali albo system ma skill issue \n");
