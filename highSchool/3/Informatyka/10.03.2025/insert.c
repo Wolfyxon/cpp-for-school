@@ -16,7 +16,8 @@ int main() {
             break;
         }
 
-        nums = realloc(nums, len++);
+        len++;
+        nums = realloc(nums, len * sizeof(int));
 
         if(nums == NULL) {
             puts("RAM sie pali");
