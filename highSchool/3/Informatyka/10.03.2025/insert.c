@@ -10,7 +10,7 @@ int main() {
 
     while(1) {
         char buf[16];
-        scanf("%s", buf);
+        scanf("%16s", buf);
 
         if(strcmp(buf, "x") == 0) {
             break;
