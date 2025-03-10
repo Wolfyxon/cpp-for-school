@@ -17,6 +17,12 @@ int main() {
         }
 
         nums = realloc(nums, len++);
+
+        if(nums == NULL) {
+            puts("RAM sie pali");
+            return 1;
+        }
+
         nums[len - 1] = atoi(buf);
     }
 
