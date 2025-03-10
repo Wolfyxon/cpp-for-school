@@ -30,7 +30,7 @@ int main() {
     for(int i = 0; i < len - 1; i++) {
         if(nums[i] > nums[i + 1]) {
             puts("Lista nie posortowana");
-            return;
+            return 0;
         }
     }
 
