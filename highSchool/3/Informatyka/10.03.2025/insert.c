@@ -28,14 +28,15 @@ int main() {
     }
 
     for(int i = 1; i < len; i++) {
+        int current = nums[i];
         int j = i - 1;
         
-        while(j >= 0 && nums[i] < nums[j]) {
-            nums[i + 1] = nums[j];
+        while(j >= 0 && current < nums[j]) {
+            nums[j + 1] = nums[j];
             j--;
         }
 
-        nums[j + 1] = nums[i];
+        nums[j + 1] = current;
     }
 
     for(int i = 0; i < len; i++) {
