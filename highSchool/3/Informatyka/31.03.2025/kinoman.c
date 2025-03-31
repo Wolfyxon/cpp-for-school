@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct {
     int start;
@@ -25,47 +26,27 @@ void sort(Film* films, size_t len) {
 }
 
 int main() {
-    Film films[] = {
-        {
-            .start = 9,
-            .end = 10
-        },
-        {
-            .start = 16,
-            .end = 17
-        },
-        {
-            .start = 15,
-            .end = 17
-        },
-        {
-            .start = 18,
-            .end = 21
-        },
-        {
-            .start = 14,
-            .end = 15
-        },
-        {
-            .start = 10,
-            .end = 11
-        },
-        {
-            .start = 13,
-            .end = 14
-        },
-        {
-            .start = 15,
-            .end = 17
-        },
-        {
-            .start = 18,
-            .end = 20
-        }
-    };
+    int filmsLen = 0;
 
-    size_t filmsLen = sizeof(films) / sizeof(Film);
+    printf("Podaj ilośc filmów: ");
+    scanf("%i", &filmsLen);
 
+    Film films[filmsLen]; 
+
+    for(int i = 0; i < filmsLen; i++) {
+        Film film;
+        
+        printf("Dane filmu F%i: \n", i);
+
+        printf("start: ");
+        scanf("%i", &film.start);
+
+        printf("koniec: ");
+        scanf("%i", &film.end);
+
+        films[i] = film;
+    }
+    
     puts("Harmonogram:");
 
     for(int i = 0; i < filmsLen; i++) {
