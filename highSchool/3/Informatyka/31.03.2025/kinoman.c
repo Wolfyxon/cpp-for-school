@@ -51,5 +51,14 @@ int main() {
         printFilm(&films[i], i);
     }
 
-    
+    puts("Wybrane filmy:");
+
+    for(int i = 1; i < filmsLen; i++) {
+        Film prev = films[i - 1];
+        Film current = films[i];
+
+        if(current.start > prev.end) {
+            printFilm(&current, i);
+        }
+    }
 }
