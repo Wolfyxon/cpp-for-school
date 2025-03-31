@@ -32,7 +32,35 @@ int main() {
         },
         {
             .start = 16,
-            .end = 19
+            .end = 17
+        },
+        {
+            .start = 15,
+            .end = 17
+        },
+        {
+            .start = 18,
+            .end = 21
+        },
+        {
+            .start = 14,
+            .end = 15
+        },
+        {
+            .start = 10,
+            .end = 11
+        },
+        {
+            .start = 13,
+            .end = 14
+        },
+        {
+            .start = 15,
+            .end = 17
+        },
+        {
+            .start = 18,
+            .end = 20
         }
     };
 
